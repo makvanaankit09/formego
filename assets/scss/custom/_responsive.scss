@@ -1,0 +1,150 @@
+@media screen and (min-width: 992px){
+    header {
+        .menu-list {
+            >li{
+                padding: 10px 0;
+                &:hover{			
+                    >a{
+                        color: $theme-primary;
+                    }
+                }
+                +li{
+                    margin-left:20px;
+                }
+            }            
+        }
+    }   
+}
+
+@media screen and (max-width:991px) {
+    .space-py-100{
+        padding-top:80px;
+        padding-bottom:80px;
+    }   
+    header{       
+        .menu-list{
+            position: absolute;
+            top:100%;
+            right:0;
+            width:100%;                      
+            overflow: auto;
+            background-color: $white;
+            display: block;           
+            z-index: 2;
+            opacity: 0;
+            visibility: hidden;       
+            transition: all 0.5s ease;    
+            border-bottom-right-radius:8px;
+            border-bottom-left-radius:8px;
+            box-shadow: 0 0 30px 5px rgba($black,5%);
+            margin-top:18px;
+            &.open{
+                opacity:1;
+                visibility:visible;                       
+            }
+            li {                
+                display: block;
+                position: relative;
+                +li{
+                    border-top: 1px solid $theme-border;
+                }
+                a{
+                    padding:10px 20px;                   
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                }               
+            }            
+        }
+        .btn{
+            margin-left:unset;
+        }
+        .menu-action{
+            display: block;
+        }       
+    }
+
+    .intro {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        .img-intro{
+            order: -1;
+        }
+        .intro-wrap{
+            width:55%;
+            margin-bottom: 30px;
+        }
+        .intro-contain {
+            h1{
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:767px){   
+    .space-py-100{
+        padding-top:60px;
+        padding-bottom:60px;
+    }         
+    .authentication-form{       
+        padding:30px;
+        .auth-icon{
+            width: 65px;
+            height: 65px;
+            margin-bottom:20px;
+            i{
+                font-size: 30px;
+            }
+        }              
+        .btn{
+            font-size:18px;
+            margin-top:25px;
+        }
+        .auth-pin{
+            margin-bottom: 30px;
+            .form-control{
+                min-height:38px;
+                &:nth-child(n+2){
+                    margin-left:5px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:575px){
+    body{
+        font-size:16px;
+    }   
+    .container{
+        padding-left:20px;
+        padding-right:20px;
+    }      
+    .authentication-form{
+        p{
+            br{
+                display: none;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width:420px){
+    .authentication-form{
+        padding:25px;
+    }   
+    .features {
+        .sec-row {
+            > div{
+                width:100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+
+/****************
+ 03  FORM START
+*****************/
+.form-control{
+    border-color: $theme-border;    
+    padding: 8px 15px;
+    color: $font-light;
+    border-radius: 5px;
+    &:focus {
+			border-color: $theme-primary;
+      		box-shadow: none;
+			~.input-group-text{		
+				border-color: $theme-primary;
+			}
+		}	
+    &::placeholder{
+      color:$font-light;
+    }      
+}
+select{
+  appearance: none !important;
+  background-image: url('../images/dropdown.png') ;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
+.group-input{
+	position: relative;
+	.form-control{
+		border-right: none;
+	}
+	.input-group-text{
+		background-color: $white;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;	
+	}
+}
+.form-label{
+  text-transform: capitalize;
+  font-weight: 500; 
+}
+select.form-control{
+  position: relative;  
+  appearance:auto;
+}
+.input-group-text{
+    border-color: $theme-border;
+    color: $font-light;
+}
+
+/* custom chekbox  start*/
+.custom-chek {
+	margin-bottom: 0;
+	.form-check-input{
+		width: 1.2em;
+		height: 1.2em;
+		border-color: $theme-border;
+		&:checked{
+			background-color: $theme-primary;
+			border-color: $theme-primary;
+		}
+	}
+	label{
+		margin-left:5px;
+	}
+  } 
+ 
+/****************
+  FORM END
+*****************/

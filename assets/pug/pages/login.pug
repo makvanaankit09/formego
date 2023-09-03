@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+
+  include ../components/headerfile
+
+  body
+
+    // Header Start
+    include ../components/header
+    // Header End
+
+    // Sign In Start
+    section.space-py-100
+      .container
+        .row
+          .col-lg-6.offset-lg-3
+            .authentication-form
+              .login-header
+                .brand-logo
+                  img.img-fluid(src='../assets/images/logo/logo.png' alt='')
+                h4 welcome to formego
+                p
+                  | Don&apos;t have an account? 
+                  a(href='register.html') Register.
+              form(action='#')
+                .row.frm-row
+                  .col-12
+                    label Email Address
+                    input.form-control(type='email' placeholder='Enter Your Email' required='')
+                  .col-12
+                    label Password
+                    .input-group.group-input
+                      input.form-control.showhide-password(type='password' placeholder='Enter Your Password' required='')
+                      span.input-group-text.toggle-show.fa.fa-eye
+                  .col-12.mb-0
+                    .d-flex.justify-content-between
+                      .form-check.custom-chek
+                        input#remember.form-check-input(type='checkbox' value='' required='')
+                        label.form-check-label(for='remember')
+                          | Remember Me
+                      a.forgot-pass(href='forgot-password.html') Forgot Password?
+                  .col-12
+                    button.btn(type='submit')
+                      i.fa.fa-sign-in
+                      |  Sign in             
+                
+    // Sign In End
+      
+    include ../components/footerfile   

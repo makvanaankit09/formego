@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+
+  include ../components/headerfile 
+
+  body   
+
+    // Header Start
+    include ../components/header
+    // Header End
+
+    // Verify Email Start
+    section.space-py-100
+      .container
+        .row
+          .col-lg-6.offset-lg-3
+            .authentication-form
+              .login-header.mb-0
+                .auth-icon
+                  i.fa.fa-envelope
+                h4 Verify Your Email Address
+                p
+                  | You&apos;ve Entered formego@example. Com As The Email Address For Yiur Account. Please Verify This Email Address By Clicking Button Below.
+              form(action='javascript:(void);')               
+                button.btn(type='submit') verify Email
+    // Verify Email End
+      
+    include ../components/footerfile  

@@ -1,0 +1,63 @@
+doctype html
+html(lang="en")
+
+  include ../components/headerfile 
+
+  body   
+
+    // Header Start
+    include ../components/header
+    // Header End
+
+    // Verify Pin Start
+    section.space-py-100
+      .container
+        .row
+          .col-lg-6.offset-lg-3
+            .authentication-form
+              .login-header
+                .auth-icon
+                  i.fa.fa-envelope-open
+                h4 Verify Your Email
+                p
+                  | Plase Enter The Verification Code We Sent 
+                  br
+                  |  To formego@example.Com
+              form(action='javascript:(void);')
+                .row.frm-row
+                  .col-12.mb-0
+                    .auth-pin
+                      input.form-control.code-input(type='text' required='')
+                      input.form-control.code-input(type='text' required='')
+                      input.form-control.code-input(type='text' required='')
+                      input.form-control.code-input(type='text' required='')
+                      input.form-control.code-input(type='text' required='')
+                      input.form-control.code-input(type='text' required='')
+                  .col-12.mb-0                   
+                    button.btn.mt-0(type='submit') Confirm
+              .login-footer
+                p
+                  | Dont Receive The Email ? 
+                  a(href='#')  Resend Email
+    // Verify Pin End   
+   
+    include ../components/footerfile
+
+    script.
+      const inputElements = [...document.querySelectorAll('input.code-input')]
+        inputElements.forEach((ele,index)=>{
+          ele.addEventListener('keydown',(e)=>{              
+            if(e.keyCode === 8 && e.target.value==='') inputElements[Math.max(0,index-1)].focus()
+          })
+          ele.addEventListener('input',(e)=>{             
+            const [first,...rest] = e.target.value
+            e.target.value = first ?? ''
+            const lastInputBox = index===inputElements.length-1
+            const insertedContent = first!==undefined
+            if(insertedContent && !lastInputBox) {               
+              inputElements[index+1].focus()
+              inputElements[index+1].value = rest.join('')
+              inputElements[index+1].dispatchEvent(new Event('input'))
+            }
+          })
+        })

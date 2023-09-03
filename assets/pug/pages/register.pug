@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+
+  include ../components/headerfile 
+
+  body   
+
+    // Header Start
+    include ../components/header
+    // Header End
+
+    // Sign Up Start
+    section.space-py-100
+      .container
+        .row
+          .col-lg-6.offset-lg-3
+            .authentication-form
+              .login-header
+                .brand-logo
+                  img.img-fluid(src='../assets/images/logo/logo.png' alt='')
+                h4 Register Account to formego
+                p
+                  | Already have an account? 
+                  a(href='login.html') Login.
+              form(action='#')
+                .row.frm-row
+                  .col-12
+                    label Full Name
+                    input.form-control(type='text' placeholder='Your Name' required='')
+                  .col-12
+                    label Email Address
+                    input.form-control(type='email' placeholder='Your Email' required='')
+                  .col-12
+                    label Password
+                    .input-group.group-input
+                      input.form-control.showhide-password(type='password' placeholder='Enter Your Password' required='')
+                      span.input-group-text.toggle-show.fa.fa-eye
+                  .col-12.mb-0
+                    .form-check.custom-chek
+                      input#agree.form-check-input(type='checkbox' value='' required='')
+                      label.form-check-label(for='agree')
+                        | I agree with the Terms Of Service.
+                  .col-12
+                    button.btn(type='submit')
+                      i.fa.fa-paper-plane
+                      |  Register             
+    // Sign Up End
+   
+    include ../components/footerfile

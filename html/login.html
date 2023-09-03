@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="authentication,login,register,forgot password,reset password,verify email,verify pin,sign in, sign up,responsive,bootstrap,bootstrap 5">
+    <meta name="description" content="Formego - HTML and CSS Responsive Forms">
+    <meta name="author" content="codnictheme">
+    <title>Formego - Responsive Forms</title>
+    <!-- Shortcut Icon-->
+    <link rel="shortcut icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
+    <!-- Font Awesome CSS-->
+    <link href="../assets/css/vendor/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap CSS-->
+    <link href="../assets/css/vendor/bootstrap.css" rel="stylesheet">
+    <!-- Style CSS-->
+    <link href="../assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header Start-->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="header-contain position-relative d-flex justify-content-between align-items-center">
+              <div class="brand-logo"><a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt=""></a></div>
+              <ul class="menu-list">
+                <li class="menu-item"><a href="login.html">login</a></li>
+                <li class="menu-item"><a href="register.html">register</a></li>
+                <li class="menu-item"><a href="forgot-password.html">forgot password</a></li>
+                <li class="menu-item"><a href="reset-password.html">reset password</a></li>
+                <li class="menu-item"><a href="verify-email.html">verify email</a></li>
+                <li class="menu-item"><a href="verify-pin.html">verify pin      </a></li>
+              </ul>
+              <div class="menu-action"><i class="fa fa-bars open-menu"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="body-layear"></div>
+    <!-- Header End-->
+    <!-- Sign In Start-->
+    <section class="space-py-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="authentication-form">
+              <div class="login-header">
+                <div class="brand-logo"><img class="img-fluid" src="../assets/images/logo/logo.png" alt=""></div>
+                <h4>welcome to formego</h4>
+                <p>Don&apos;t have an account? <a href="register.html">Register.</a></p>
+              </div>
+              <form action="#">
+                <div class="row frm-row">
+                  <div class="col-12">
+                    <label>Email Address</label>
+                    <input class="form-control" type="email" placeholder="Enter Your Email" required="">
+                  </div>
+                  <div class="col-12">
+                    <label>Password</label>
+                    <div class="input-group group-input">
+                      <input class="form-control showhide-password" type="password" placeholder="Enter Your Password" required=""><span class="input-group-text toggle-show fa fa-eye"></span>
+                    </div>
+                  </div>
+                  <div class="col-12 mb-0">
+                    <div class="d-flex justify-content-between">
+                      <div class="form-check custom-chek">
+                        <input class="form-check-input" id="remember" type="checkbox" value="" required="">
+                        <label class="form-check-label" for="remember">Remember Me</label>
+                      </div><a class="forgot-pass" href="forgot-password.html">Forgot Password?</a>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn" type="submit"><i class="fa fa-sign-in"></i> Sign in             </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sign In End-->
+    <!-- main jquery-->
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Custom script-->
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

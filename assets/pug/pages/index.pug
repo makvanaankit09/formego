@@ -1,0 +1,170 @@
+doctype html
+html(lang="en")
+
+  include ../components/headerfile
+
+  body.bg-white
+
+    // header start
+    header.land-header
+      .container
+        .row
+          .col-12
+            .header-contain.position-relative.d-flex.justify-content-between.align-items-center
+              .brand-logo
+                a(href='index.html')
+                  img.img-fluid.light-logo(src='../assets/images/logo/logo.png' alt='')                 
+              ul.menu-list
+                li.menu-item
+                  a(href='#demos') demo
+                li.menu-item
+                  a(href='#features') features
+              .menu-action
+                i.fa.fa-bars
+    .body-layear
+    // header end
+  
+    // intro start
+    section.intro
+      .container
+        .row.align-items-center
+          .col-lg-6
+            .intro-contain
+              div
+                h1 Formego  Responisve Forms
+                p
+                  | formego Is A Bootstrap Responisve Forms. formego Responisve Forms Is The Most Developer Friendly & Highly Customizable Responisve Forms pages Template Based On Bootstrap 5. It Has 5+ Different Pages Which Are Managed By SCSS Only.
+                a.btn(href='#demos')
+                  i.fa.fa-television
+                  | live demo
+          .col-lg-6.img-intro
+            .intro-wrap.text-lg-end
+              img.img-fluid(src="../assets/images/demo/hero.png" alt='')
+    // intro end
+
+    // demo start
+    section#demos.space-py-100
+      .title
+        h2 Form demos
+      .container
+        .row.sec-row.justify-content-center
+          .col-lg-4.col-md-6
+            .demo-grid
+              a(href='login.html' target="_blank")
+                .img-wrap
+                  img.img-fluid(src='../assets/images/demo/light/1.jpg' alt='')                 
+                .demo-detail
+                  h4 login
+          .col-lg-4.col-md-6
+            .demo-grid
+              a(href='register.html' target="_blank")
+                .img-wrap
+                  img.img-fluid(src='../assets/images/demo/light/2.jpg' alt='')
+                .demo-detail
+                  h4 register
+          .col-lg-4.col-md-6
+            .demo-grid
+              a(href='forgot-password.html' target="_blank")
+                .img-wrap
+                  img.img-fluid(src='../assets/images/demo/light/3.jpg' alt='')                   
+                .demo-detail
+                  h4 forgot password
+          .col-lg-4.col-md-6
+            .demo-grid
+              a(href='reset-password.html' target="_blank")
+                .img-wrap
+                  img.img-fluid(src='../assets/images/demo/light/4.jpg' alt='')                 
+                .demo-detail
+                  h4 reset password
+          .col-lg-4.col-md-6
+            .demo-grid
+              a(href='verify-email.html' target="_blank")
+                .img-wrap
+                  img.img-fluid(src='../assets/images/demo/light/5.jpg' alt='')                 
+                .demo-detail
+                  h4 verify email
+          .col-lg-4.col-md-6
+            .demo-grid
+              a(href='verify-pin.html' target="_blank")
+                .img-wrap
+                  img.img-fluid(src='../assets/images/demo/light/6.jpg' alt='')                 
+                .demo-detail
+                  h4 verify pin         
+    // demo end
+
+    // feathure start
+    section#features.features.space-py-100.bg-light
+      .title
+        h2 formego Features
+      .container
+        .row.sec-row.justify-content-center
+          .col-lg-3.col-6
+            .feathure-grid             
+              h5 html 5
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 CSS 3
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 SCSS
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 Bootstrap
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 Google Font         
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 Fully Responsive
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 Clean Code
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 Free Updates
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 Forms
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 Easy To Customize          
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 5+ Ready Form
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 jQuery
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 Well Documented
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 W3 Validated
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 High Performance
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 Browser Compatibility
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 Great Support
+          .col-lg-3.col-6
+            .feathure-grid
+              h5 Password Show/Hide
+    // feathure end
+
+
+    // footer start
+    include ../components/footer
+    // footer end
+
+
+    // Tap To Top Start
+    a.tap-top(href='Javascript:void(0)')
+      i.fa.fa-angle-double-up
+    // Tap To Top End
+
+    // footer file start
+    include ../components/footerfile
+    // footer file end

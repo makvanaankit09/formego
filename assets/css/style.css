@@ -1,0 +1,675 @@
+/*********************************************************************
+Item Name: formego - Authentication HTML5 Pages Template
+Author: codnictheme
+Author URI: https://codecanyon.net/user/codnictheme
+**********************************************************************/
+/***  01 TYPOGRAPHY ***/
+/***  02 HEADER ***/
+/***  03 INTRO ***/
+/***  04 DEMO ***/
+/***  05 FEATHURES ***/
+/***  06 FOOTER ***/
+/***  07 BREADCRUMB ***/
+/***  08 SCROLL TOP ***/
+/***  09 AUTHENTICATION ***/
+/***  10 CUSTOMIZER START ***/
+/***  11 AUTHENTICATION START ***/
+/*******************
+ 01 TYPOGRAPHY START
+********************/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  color: #09362d;
+  background-color: rgba(41, 128, 185, 0.1);
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #2980b9;
+}
+a:hover {
+  color: #2980b9;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+ol, ul, dl {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  color: #acb8b6;
+}
+
+.btn {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 10px 35px;
+  border: 2px solid #2980b9;
+  background-color: #2980b9;
+  border-radius: 5px;
+  position: relative;
+  -webkit-animation: all 0.5s ease;
+          animation: all 0.5s ease;
+  z-index: 1;
+  overflow: hidden;
+}
+.btn:focus, .btn:hover {
+  color: #ffffff;
+  background-color: #2980b9;
+  border-color: #2980b9;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.space-py-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.frm-row {
+  margin-bottom: -18px;
+}
+.frm-row > div {
+  margin-bottom: 18px;
+}
+
+.sec-row {
+  margin-bottom: -30px;
+}
+.sec-row > div {
+  margin-bottom: 30px;
+}
+
+.title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #2980b9;
+  position: relative;
+}
+.title h2 {
+  text-transform: capitalize;
+  font-weight: 800;
+}
+
+/****************
+ 03  FORM START
+*****************/
+.form-control {
+  border-color: #e8e8e8;
+  padding: 8px 15px;
+  color: #acb8b6;
+  border-radius: 5px;
+}
+.form-control:focus {
+  border-color: #2980b9;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.form-control:focus ~ .input-group-text {
+  border-color: #2980b9;
+}
+.form-control::-webkit-input-placeholder {
+  color: #acb8b6;
+}
+.form-control::-moz-placeholder {
+  color: #acb8b6;
+}
+.form-control:-ms-input-placeholder {
+  color: #acb8b6;
+}
+.form-control::-ms-input-placeholder {
+  color: #acb8b6;
+}
+.form-control::placeholder {
+  color: #acb8b6;
+}
+
+select {
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+          appearance: none !important;
+  background-image: url("../images/dropdown.png");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
+
+.group-input {
+  position: relative;
+}
+.group-input .form-control {
+  border-right: none;
+}
+.group-input .input-group-text {
+  background-color: #ffffff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.form-label {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+select.form-control {
+  position: relative;
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+}
+
+.input-group-text {
+  border-color: #e8e8e8;
+  color: #acb8b6;
+}
+
+/* custom chekbox  start*/
+.custom-chek {
+  margin-bottom: 0;
+}
+.custom-chek .form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  border-color: #e8e8e8;
+}
+.custom-chek .form-check-input:checked {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+.custom-chek label {
+  margin-left: 5px;
+}
+
+/****************
+  FORM END
+*****************/
+/************************
+ 11 AUTHENTICATION START
+***********************/
+.authentication-form {
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 30px 5px rgba(9, 54, 45, 0.05);
+          box-shadow: 0 0 30px 5px rgba(9, 54, 45, 0.05);
+}
+.authentication-form .auth-icon {
+  margin-bottom: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(41, 128, 185, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+}
+.authentication-form .auth-icon i {
+  font-size: 35px;
+  color: #2980b9;
+}
+.authentication-form .login-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.authentication-form .login-header .brand-logo {
+  margin-bottom: 15px;
+}
+.authentication-form .login-header h4 {
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.authentication-form .login-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+.authentication-form .login-footer a {
+  color: #2980b9;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.authentication-form .login-footer a:hover {
+  color: #09362d;
+}
+.authentication-form .btn {
+  width: 100%;
+  font-size: 20px;
+  margin-top: 35px;
+}
+.authentication-form .btn i {
+  margin-right: 5px;
+}
+.authentication-form .auth-pin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 45px;
+}
+.authentication-form .auth-pin .form-control {
+  min-height: 50px;
+  text-align: center;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+}
+.authentication-form .auth-pin .form-control:nth-child(n+2) {
+  margin-left: 15px;
+}
+.authentication-form .input-group .input-group-text {
+  font-size: 18px;
+  color: #2980b9;
+}
+
+.authentic-box {
+  border: 1px solid #e8e8e8;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+/*******************
+ 02 HEADER START
+********************/
+header {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background-color: #ffffff;
+  z-index: 9;
+  position: relative;
+}
+header .menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .menu-list a {
+  color: #09362d;
+  font-size: 16px;
+  font-weight: 500;
+}
+header .menu-list > li {
+  position: relative;
+}
+header .menu-list > li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+header .menu-list > li > a i {
+  margin-left: 10px;
+  font-weight: 500;
+}
+header .menu-list li {
+  text-transform: capitalize;
+}
+header .btn {
+  padding: 6px 25px;
+  font-size: 14px;
+}
+header .menu-action {
+  margin-left: 20px;
+  display: none;
+  position: relative;
+}
+header .menu-action i {
+  font-size: 24px;
+}
+header .menu-action .close-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 3;
+  color: #ffffff;
+}
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-animation: fadeInDown 0.5s ease;
+          animation: fadeInDown 0.5s ease;
+  -webkit-box-shadow: 0 0 10px 0 rgba(9, 54, 45, 0.1);
+          box-shadow: 0 0 10px 0 rgba(9, 54, 45, 0.1);
+}
+
+.body-layear {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 54, 45, 0.8);
+  z-index: 8;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.body-layear.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/***************
+ 03 INTRO START
+****************/
+.intro {
+  background-color: rgba(41, 128, 185, 0.1);
+  position: relative;
+  overflow: hidden;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.intro .intro-contain {
+  position: relative;
+}
+.intro .intro-contain h1 {
+  font-weight: 600;
+  font-size: 40px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.intro .intro-contain p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.intro .intro-contain .btn i {
+  margin-right: 10px;
+}
+
+/***************
+ 04 DEMO START
+****************/
+.demo-grid {
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.demo-grid .img-wrap {
+  overflow: hidden;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 30px 5px rgba(9, 54, 45, 0.05);
+          box-shadow: 0 0 30px 5px rgba(9, 54, 45, 0.05);
+  position: relative;
+}
+.demo-grid .img-wrap img {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.demo-grid .demo-detail {
+  margin-top: 20px;
+}
+.demo-grid .demo-detail h4 {
+  color: #09362d;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.demo-grid:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.demo-grid:hover .img-wrap img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+/******************
+ 05 FEATHURES START
+*******************/
+.feathure .cdx-row {
+  margin-bottom: -40px;
+}
+.feathure .cdx-row > div {
+  margin-bottom: 40px;
+}
+
+.feathure-grid {
+  text-align: center;
+  background-color: rgba(41, 128, 185, 0.1);
+  padding: 30px 0;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.feathure-grid h5 {
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.feathure-grid:hover {
+  background-color: #2980b9;
+}
+.feathure-grid:hover h5 {
+  color: #ffffff;
+}
+
+/******************
+ 06 FOOTER START
+*******************/
+footer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #2980b9;
+  text-align: center;
+}
+footer p {
+  color: #ffffff;
+}
+
+/*********************
+ 08 SCROLL TOP  START
+*********************/
+.tap-top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  background: #2980b9;
+  color: #ffffff;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  text-align: center;
+  -webkit-box-shadow: 0 3px 24px rgba(9, 54, 45, 0.1);
+          box-shadow: 0 3px 24px rgba(9, 54, 45, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.tap-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+.tap-top:hover {
+  color: #ffffff;
+}
+
+@media screen and (min-width: 992px) {
+  header .menu-list > li {
+    padding: 10px 0;
+  }
+  header .menu-list > li:hover > a {
+    color: #2980b9;
+  }
+  header .menu-list > li + li {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .space-py-100 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  header .menu-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    overflow: auto;
+    background-color: #ffffff;
+    display: block;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -webkit-box-shadow: 0 0 30px 5px rgba(9, 54, 45, 0.05);
+            box-shadow: 0 0 30px 5px rgba(9, 54, 45, 0.05);
+    margin-top: 18px;
+  }
+  header .menu-list.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  header .menu-list li {
+    display: block;
+    position: relative;
+  }
+  header .menu-list li + li {
+    border-top: 1px solid #e8e8e8;
+  }
+  header .menu-list li a {
+    padding: 10px 20px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+  }
+  header .btn {
+    margin-left: unset;
+  }
+  header .menu-action {
+    display: block;
+  }
+  .intro {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .intro .img-intro {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .intro .intro-wrap {
+    width: 55%;
+    margin-bottom: 30px;
+  }
+  .intro .intro-contain h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .space-py-100 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .authentication-form {
+    padding: 30px;
+  }
+  .authentication-form .auth-icon {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 20px;
+  }
+  .authentication-form .auth-icon i {
+    font-size: 30px;
+  }
+  .authentication-form .btn {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+  .authentication-form .auth-pin {
+    margin-bottom: 30px;
+  }
+  .authentication-form .auth-pin .form-control {
+    min-height: 38px;
+  }
+  .authentication-form .auth-pin .form-control:nth-child(n+2) {
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 575px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .authentication-form p br {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .authentication-form {
+    padding: 25px;
+  }
+  .features .sec-row > div {
+    width: 100%;
+  }
+}
